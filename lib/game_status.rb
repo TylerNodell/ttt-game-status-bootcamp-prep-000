@@ -4,16 +4,6 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-# board_combinations = [
-#   [board[0],board[1],board[2]],
-#   [board[3],board[4],board[5]],
-#   [board[6],board[7],board[8]],
-#   [board[0],board[3],board[6]],
-#   [board[1],board[4],board[7]],
-#   [board[2],board[5],board[8]],
-#   [board[0],board[4],board[8]],
-#   [board[6],board[4],board[2]]
-# ]
 
 WIN_COMBINATIONS = [
   [0,1,2],
@@ -28,9 +18,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   WIN_COMBINATIONS.detect{|combination|
-      index1 = board[combination[0]]
-      index2 = board[combination[1]]
-      index3 = board[combination[2]]
+      board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] && position_taken?(board, combination[0])
 
       if index1 == "X" && index2 == "X" && index3 == "X"
         combination
@@ -41,6 +29,12 @@ def won?(board)
 
 def full?(board)
   !board.any?{ |i| i == " " }
+end
+
+def draw?(board)
+  if full?(board) == true
+    
+  end
 end
 
 end
