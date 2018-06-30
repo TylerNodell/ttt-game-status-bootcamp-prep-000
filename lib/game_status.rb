@@ -34,12 +34,8 @@ def over?(board)
   full?(board)  || won?(board)
 end
 
-# def winner(board)
-#
-# end
-
 def winner(board)
   if combo = won?(board)
-    board[combo.to_i]
+    board[combo]
   end
 end
