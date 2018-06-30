@@ -33,7 +33,7 @@ def won?(board)
       index3 = board[combination[2]]
 
       if index1 == "X" && index2 == "X" && index3 == "X"
-        return combination
+        combination
       else
         false
       end
