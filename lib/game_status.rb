@@ -27,13 +27,13 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.any?{|combination|
+  WIN_COMBINATIONS.detect{|combination|
       index1 = board[combination[0]]
       index2 = board[combination[1]]
       index3 = board[combination[2]]
 
       if index1 == "X" && index2 == "X" && index3 == "X"
-        combination.to_a
+        combination
       else
         false
       end
