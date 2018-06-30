@@ -27,9 +27,15 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.each?{|combination| 
+  WIN_COMBINATIONS.each?{|combination|
       index1 = board[combination[0]]
       index2 = board[combination[1]]
       index3 = board[combination[2]]
+
+      if index1 == "X" && index2 == "X" && index3 == "X"
+        return combination
+      else
+        false
+      end
   }
 end
