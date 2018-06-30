@@ -31,5 +31,5 @@ def draw?(board)
 end
 
 def over?(board)
-  fill?(board)
+  full?(board)
 end
