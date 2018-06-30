@@ -19,13 +19,8 @@ WIN_COMBINATIONS = [
 def won?(board)
   WIN_COMBINATIONS.detect{|combination|
       board[combination[0]] == board[combination[1]] && board[combination[1]] == board[combination[2]] && position_taken?(board, combination[0])
-
-      if index1 == "X" && index2 == "X" && index3 == "X"
-        combination
-      else
-        false
-      end
-  }
+    }
+end
 
 def full?(board)
   !board.any?{ |i| i == " " }
@@ -33,8 +28,6 @@ end
 
 def draw?(board)
   if full?(board) == true
-    
-  end
-end
 
+  end
 end
