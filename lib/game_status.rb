@@ -27,7 +27,7 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  WIN_COMBINATIONS.detect{|combination|
+  WIN_COMBINATIONS.any{|combination|
       index1 = board[combination[0]]
       index2 = board[combination[1]]
       index3 = board[combination[2]]
