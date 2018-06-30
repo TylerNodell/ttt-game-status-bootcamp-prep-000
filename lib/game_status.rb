@@ -27,5 +27,5 @@ def won?(board)
     [board[6],board[4],board[2]]
   ]
 
-  board_combinations.any?{|i| i = WIN_COMBINATIONS[i]}
+  board_combinations.any?{|i| i == WIN_COMBINATIONS[i]}
 end
